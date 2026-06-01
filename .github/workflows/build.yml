@@ -1,0 +1,23 @@
+name: Build FixPilotAI Installer
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build NSIS Installer
+      uses: joncloud/makensis-action@v4
+      with:
+        script-file: FixPilotAI-Installer.nsi
+
+    - name: Upload Installer
+      uses: actions/upload-artifact@v3
+      with:
+        name: FixPilotAI-Setup
+        path: FixPilotAI-Installer.exe
