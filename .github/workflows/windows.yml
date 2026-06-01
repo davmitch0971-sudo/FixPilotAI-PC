@@ -1,0 +1,24 @@
+name: Build Windows Installer
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install NSIS
+      run: choco install nsis -y
+
+    - name: Build Installer
+      run: makensis FixPilotAI-Installer.nsi
+
+    - name: Upload Installer
+      uses: actions/upload-artifact@v3
+      with:
+        name: FixPilotAI-Setup
+        path: FixPilotAI-Setup.exe
