@@ -1,3 +1,4 @@
+![FixPilot-AI Banner](banner.png)
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&pause=1200&color=00C2FF&center=true&vCenter=true&width=700&lines=FixPilot%E2%80%91AI+%E2%80%94+Your+Personal+AI+Engineer;Fix.+Automate.+Accelerate.;Fix+code.+Repair+systems.+Automate+everything." alt="FixPilot-AI animated header" />
 </p>
